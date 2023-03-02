@@ -14,7 +14,13 @@
       "openFiles": [
         "pages/index.js"
       ]
-    }
+	},
+	"vscode": {
+		"extensions": [
+			"vsls-contrib.codetour",
+			"GitHub.copilot"
+		]
+	}
   },
   "portsAttributes": {
     "3000": {

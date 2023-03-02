@@ -23,124 +23,121 @@
     {
       "file": "pages/index.js",
       "line": 2,
-      "description": "Time to import dependencies! Press enter to create a new line, then accept Copilot's suggestions for the following imports:\n\n ```import React, { useState } from 'react';\n\nimport Head from 'next/head';\n\nimport Link from 'next/link';\n\nimport { v4 as uuidv4 } from 'uuid';```\n\n Click `Next` to continue."
+      "description": "Time to import dependencies! Press enter to create a new line, then accept Copilot's suggestions for the following imports:\n\n ```\n import React, { useState } from 'react';\n\nimport Head from 'next/head';\n\nimport Link from 'next/link';\n\nimport { v4 as uuidv4 } from 'uuid';\n```\n\n Click `Next` to continue."
     },
     {
       "file": "pages/index.js",
       "line": 9,
-      "description": "Let's prompt Copilot to create an exported function component by typing the comment\n\n`// // create export function Home to render the page and hold to do list logic` Press enter and accept Copilot's suggestion: ```export default function Home() {}.``` Click `Next` to continue."
+      "description": "Let's prompt Copilot to create an exported function component by typing the comment\n\n`// // create export function Home to render the page and hold to do list logic` \nPress enter and accept Copilot's suggestion: \n```\nexport default function Home() {\n\n}.\n``` \nClick `Next` to continue."
     },
-    
     {
       "file": "pages/index.js",
       "line": 10,
-      "description": "Let's prompt Copilot to create a state variable to hold the to do list items by typing the comment\n\n`// create state for to do list with default items` Press enter and accept Copilot's suggestion: ```const [todos, setTodos] = useState([  { id: uuidv4(), text: 'Learn Next.js' },{ id: uuidv4(), text: 'Learn React' },{ id: uuidv4(), text: 'Learn GraphQL' },]);``` Click `Next` to continue."
+      "description": "Let's prompt Copilot to create a state variable to hold the to do list items by typing the comment\n\n`// create state for to do list with default items` Press enter and accept Copilot's suggestion: \n```\nconst [todos, setTodos] = useState([  \n    { id: uuidv4(), text: 'Learn Next.js' },\n    { id: uuidv4(), text: 'Learn React' },\n    { id: uuidv4(), text: 'Learn GraphQL' },\n    ]);\n``` \nClick `Next` to continue."
     },
-   {
-    "file": "pages/index.js",
-    "line": 17,
-    "description": "Let's prompt Copilot to create a state variable for new to do items. Type the comment\n\n`// create state for new to do item` Press enter and accept Copilot's suggestion: ```const [newTodo, setNewTodo] = useState('');``` Click `Next` to continue."
-   },
-   {
-    "file": "pages/index.js",
-    "line": 20,
-    "description": "Let's prompt Copilot to create a function to handle adding new to do items. Type the comment\n\n`// create function to handle adding new to do item` Press enter and accept Copilot's suggestion: ```const handleAddTodo = (e) => {  e.preventDefault();  if (newTodo) {    setTodos([...todos, {      id: uuidv4(),      text: newTodo,    }]);    setNewTodo('');  }};``` Click `Next` to continue."
-   },
-   {
-    "file": "pages/index.js",
-    "line": 27,
-    "description": "Let's prompt Copilot to create a function to handle deleting to do items. Type the comment\n\n`// create function to handle deleting to do item` Press enter and accept Copilot's suggestion: ```const handleDeleteTodo = (id) => {  setTodos(todos.filter((todo) => todo.id !== id));};``` Click `Next` to continue."
-   },
-   {
-    "file": "pages/index.js",
-    "line": 32,
-    "description": "Let's prompt Copilot to create a function to handle editing to do items. Type the comment\n\n`// create function to handle editing to do item` Press enter and accept Copilot's suggestion: ```const handleEditTodo = (id, text) => {  setTodos(todos.map((todo) => todo.id === id ? { ...todo, text } : todo));};``` Click `Next` to continue."
-   },
-   {
-    "file": "pages/index.js",
-    "line": 38,
-    "description": "Let's prompt Copilot to render elements on the page with a return statement. Type the comment\n\n```// return the page with the to do list and form to add new items``` Press enter and accept Copilot's suggestion: ```return ( <div className='container'><Head><title>Next.js To Do List</title><link rel='icon' href='/favicon.ico' /></Head></div> );```\n\n DON'T FORGET TO CLOSE THE DIV! Click `Next` to continue."
-   },
-   {
-    "file": "pages/index.js",
-    "line": 44,
-    "description": "Where the <Head></Head> ends, let's prompt Copilot to render a header with a title. Type the comment\n\n```{/*  main tag with header and input form to add to dos */}``` Press enter and accept Copilot's suggestion: ```<main><h1 className='title'>Next.js To Do List</h1> <form onSubmit={handleAddTodo}><input type='text' placeholder='Add a to do item' value={newTodo} onChange={(e) => setNewTodo(e.target.value)} /> <button type='submit'>Add</button></form> </main>```\n\n DON'T FORGET TO CLOSE THE MAIN TAG! Click `Next` to continue."
-   },
-   {
-    "title": "Check out your page!!! 🎉",
-    "description": "Now that we have the basic structure of the page, let's check out what we have so far. Refresh your Simple Browser tab. You should see a page with a header and an input form to add to do items.\n\n We're not done yet! `Next` to continue. 👇" 
-   },
-   {
-    "file": "pages/index.js",
-    "line": 58,
-    "description": "Now, we want to show our list of items. Prompt Copilot to render a list of items by typing the comment \n\n``` {/*  ul tag to hold the to do list items */}`` Press enter and accept Copilot's suggestion: ```<ul>{todos.map((todo) => ( <li key={todo.id}>{todo.text}</li> ))}</ul>``` DON'T FORGET TO CLOSE YOUR TAGS! Click `Next` to continue."
-   },
-   {
-    "title": "Try it out!",
-    "description": "Now that we can add items to our list, let's try it out! Refresh your page first.\n\n In the input form, type `Learn GitHub Copilot` and click `Add`. You should see the new item added to the list. Click `Next` to continue."
-   },
-   {
-    "file": "pages/index.js",
-    "line": 65,
-    "description": "Let's add a button to delete items. Prompt Copilot to render a button by typing a comment inside the <li></li> tag \n\n``` {/*  button to delete to do item */}`` Press enter and accept Copilot's suggestion: ```<button onClick={() => handleDeleteTodo(todo.id)}>Delete</button>``` Click `Next` to continue."
-   },
-   {
-    "title": "Try it out!",
-    "description": "Now that we can delete items from our list, let's try it out! Refresh your page first.\n\n Click the `Delete` button next to `Learn GitHub Copilot` or any of the list items. You should see the item removed from the list. Click `Next` to continue."
-   },
-   {
-    "file": "pages/index.js",
-    "line": 67,
-    "description": "Let's add a button to edit items. Prompt Copilot to render a button by typing a comment inside the <li></li> tag \n\n``` {/*  button to edit to do item */}`` Press enter and accept Copilot's suggestion: ```<button onClick={() => handleEditTodo(todo.id, todo.text)}>Edit</button>``` Click `Next` to continue."
-   },
-   {
-    "title": "Try it out!",
-    "description": "Now that we have an edit button, let's try it out! Refresh your page and click edit on one of the list items. \n\n Uh-oh! Looks like this doesn't work. This is a good reminder that we can't blindly accept Copilot's suggestions. Let's fix this. Click `Next` to continue."
-   },
-   {
-    "file": "pages/index.js",
-    "line": 65,
-    "description": "Underneath the line of code that says, `{todo.items}`, let's add an input box, so we can edit the text. Start typing the following lines and see Copilot autocomplete it for you!\n\n```<input type='text' value={todo.text} onChange={(e) => handleEditTodo(todo.id, e.target.value)} />``` Click `Next` to continue."
-   },
-   {
-    "title": "Try it out!",
-    "description": "Now that we can edit items from our list, let's try it out! Refresh your page first.\n\n Edit one of the items via an input box. Click out of the input box or press edit to save your changes.\n\n You can Click `Next` to continue."
-   },
-   {
-    "title": "Time to add styles",
-    "description": "Now that we have the basic functionality of our to do list, let's add some styles to make it look pretty. Click `Next` to continue."
-   }, 
-   {
-    "file": "pages/index.js",
-    "line": 6,
-    "description": "At the top of our file, import the styled-components library by typing the following line of code:\n\n```import styled from 'styled-components';``` Click `Next` to continue."
-   },
-   {
-    "file": "pages/index.js",
-    "line": 9,
-    "description": "Let's style the background of the page with a gradient. Write a comment that says,\n\n ```// use styled components to style the page with a gradient background``` Press enter and tab to accept Copilot's suggestions. It should give you the following code:\n\n```const Gradient = styled.div`background: linear-gradient(90deg, #f6d365 0%, #fda085 100%);`;``` Click `Next` to continue."
-   },
-
-   {
-    "file": "pages/index.js",
-    "line": 53,
-    "description": "Change div with className='container' to Gradient. It should look like this:\n\n```<Gradient><Head><title>Next.js To Do List</title><link rel='icon' href='/favicon.ico' /></Head>....</Gradient>``` Click `Next` to continue."
-   },
-   {
-    "file": "pages/index.js",
-    "line": 19,
-    "description": "Let's style the buttons. Write a comment that says:\n\n```// use styled components to style the buttons``` Press enter and tab to accept Copilot's suggestions. It should give you the following code:\n\n```const Button = styled.button`background: #f6d365; border: none; border-radius: 5px; padding: 10px 20px; color: #fff; font-weight: bold; cursor: pointer; &:hover { background: #fda085; }`;``` Click `Next` to continue."
-   },
-   {
-    "file": "pages/index.js",
-    "line": 80,
-    "description": "Change ALL the button tags to Button. It should look like this:\n\n```<Button onClick={() => handleDeleteTodo(todo.id)}>Delete</Button>``` Click `Next` to continue."
-   },
-   {
-    "title": "Try it out!",
-    "description": "Refresh the page! You should see a gradient background and styled buttons\n\n This tutorial is complete. You can keep experimenting with GitHub Copilot to add more styles or more functionality! Have fun. ."
-   }
-
+    {
+      "file": "pages/index.js",
+      "line": 17,
+      "description": "Let's prompt Copilot to create a state variable for new to do items. Type the comment\n\n`// create state for new to do item` Press enter and accept Copilot's suggestion: \n```\nconst [newTodo, setNewTodo] = useState('');\n``` \nClick `Next` to continue."
+    },
+    {
+      "file": "pages/index.js",
+      "line": 20,
+      "description": "Let's prompt Copilot to create a function to handle adding new to do items. Type the comment\n\n`// create function to handle adding new to do items` \n\nPress enter and accept Copilot's suggestion: \n```\nconst handleAddTodo = (e) => {  \n    e.preventDefault();  if (newTodo) \n    {    setTodos([...todos, {      id: uuidv4(),      text: newTodo,    }]);   \n     setNewTodo('');  }};\n``` \nClick `Next` to continue."
+    },
+    {
+      "file": "pages/index.js",
+      "line": 27,
+      "description": "Let's prompt Copilot to create a function to handle deleting to do items. Type the comment\n\n`// create function to handle deleting to do item` \n\nPress enter and accept Copilot's suggestion: \n```\nconst handleDeleteTodo = (id) => \n{  setTodos(todos.filter((todo) => todo.id !== id));\n};\n``` \nClick `Next` to continue."
+    },
+    {
+      "file": "pages/index.js",
+      "line": 32,
+      "description": "Let's prompt Copilot to create a function to handle editing to do items. Type the comment\n\n`// create function to handle editing to do item` \n\nPress enter and accept Copilot's suggestion: \n\n```\nconst handleEditTodo = (id, text) => {  \n    setTodos(todos.map((todo) => todo.id === id ? { ...todo, text } : todo));\n};\n``` \nClick `Next` to continue."
+    },
+    {
+      "file": "pages/index.js",
+      "line": 38,
+      "description": "Let's prompt Copilot to render elements on the page with a return statement. Type the comment\n\n`// return the page with the to do list and form to add new items`\nPress enter and accept Copilot's suggestion: \n```\nreturn ( \n    <div className='container'>\n    <Head>\n    <title>Next.js To Do List</title>\n    <link rel='icon' href='/favicon.ico' />\n    </Head>\n    </div> \n    );\n```\n\n DON'T FORGET TO CLOSE THE DIV OR THE RETURN STATEMENT!\n Click `Next` to continue."
+    },
+    {
+      "file": "pages/index.js",
+      "line": 44,
+      "description": "Where the `<Head></Head>` tag ends, let's prompt Copilot to render a header with a title. Type the comment\n\n```{/*  main tag with header and input form to add to dos */}``` \n\nPress enter and accept Copilot's suggestion: \n\n```\n<main>\n<h1 className='title'>Next.js To Do List</h1> \n<form onSubmit={handleAddTodo}><input type='text' placeholder='Add a to do item' value={newTodo} onChange={(e) => setNewTodo(e.target.value)} /> \n<button type='submit'>Add</button>\n</form> \n</main>\n```\n\nDON'T FORGET TO CLOSE THE MAIN TAG! Click `Next` to continue."
+    },
+    {
+      "title": "Check out your page!!! 🎉",
+      "description": "Now that we have the basic structure of the page, let's check out what we have so far. Refresh your Simple Browser tab. You should see a page with a header and an input form to add to do items.\n\n We're not done yet! `Next` to continue. 👇"
+    },
+    {
+      "file": "pages/index.js",
+      "line": 58,
+      "description": "Now, we want to show our list of items. Prompt Copilot to render a list of items by typing the comment \n\n`{/*  ul tag to hold the to do list items */}` \n\nPress enter and accept Copilot's suggestion: \n\n```\n<ul>{todos.map((todo) => \n( <li key={todo.id}>{todo.text}</li> ))}\n</ul>\n``` \n\nDON'T FORGET TO CLOSE YOUR TAGS! Click `Next` to continue."
+    },
+    {
+      "title": "Try it out!",
+      "description": "Now that we can add items to our list, let's try it out! Refresh your page first.\n\n In the input form, type `Learn GitHub Copilot` and click `Add`. You should see the new item added to the list. Click `Next` to continue."
+    },
+    {
+      "file": "pages/index.js",
+      "line": 65,
+      "description": "Let's add a button to delete items. Prompt Copilot to render a button by typing a comment inside the `<li></li>` tag \n\n`{/*  button to delete to do item */}` \n\nPress enter and accept Copilot's suggestion: \n\n```\n<button onClick={() => handleDeleteTodo(todo.id)}>Delete</button>\n``` \n\nClick `Next` to continue."
+    },
+    {
+      "title": "Try it out!",
+      "description": "Now that we can delete items from our list, let's try it out! Refresh your page first.\n\n Click the `Delete` button next to `Learn GitHub Copilot` or any of the list items. You should see the item removed from the list. Click `Next` to continue."
+    },
+    {
+      "file": "pages/index.js",
+      "line": 67,
+      "description": "Let's add a button to edit items. Prompt Copilot to render a button by typing a comment inside the `<li></li>` tag \n\n`{/*  button to edit to do item */}`\nPress enter and accept Copilot's suggestion: \n\n```\n<button onClick={() => handleEditTodo(todo.id, todo.text)}>Edit</button>\n``` \n\nClick `Next` to continue."
+    },
+    {
+      "title": "Try it out!",
+      "description": "Now that we have an edit button, let's try it out! Refresh your page and click edit on one of the list items. \n\n Uh-oh! Looks like this doesn't work. This is a good reminder that we can't blindly accept Copilot's suggestions. Let's fix this. \n \n Click `Next` to continue."
+    },
+    {
+      "file": "pages/index.js",
+      "line": 65,
+      "description": "Within the `<li></li>` tag, let's add an input box, so we can edit the text. Start typing the following lines and see Copilot autocomplete it for you!\n\n```\n<input \ntype='text' value={todo.text} \nonChange={(e) => handleEditTodo(todo.id, e.target.value)} \n/>\n``` \n\nClick `Next` to continue."
+    },
+    {
+      "title": "Try it out!",
+      "description": "Now that we can edit items from our list, let's try it out! Refresh your page first.\n\n Edit one of the items via an input box. Click out of the input box or press edit to save your changes.\n\n You can Click `Next` to continue."
+    },
+    {
+      "title": "Time to add styles",
+      "description": "Now that we have the basic functionality of our to do list, let's add some styles to make it look pretty. \n\nClick `Next` to continue."
+    },
+    {
+      "file": "pages/index.js",
+      "line": 6,
+      "description": "At the top of our file, import the styled-components library by typing the following line of code:\n\n```import styled from 'styled-components';``` \n\nClick `Next` to continue."
+    },
+    {
+      "file": "pages/index.js",
+      "line": 9,
+      "description": "Let's style the background of the page with a gradient. Write a comment that says,\n\n ```// use styled components to style the page with a gradient background``` \n \n Press enter and tab to accept Copilot's suggestions. \n \n It should give you code that resembles the following lines: \n\n```\nconst Gradient = styled.div\n`background: linear-gradient(90deg, #f6d365 0%, #fda085 100%);\n`;\n``` \n\nClick `Next` to continue."
+    },
+    {
+      "file": "pages/index.js",
+      "line": 53,
+      "description": "Change div with className='container' to Gradient. It should look similar to this:\n\n```\n<Gradient>\n<Head>\n<title>Next.js To Do List</title>\n<link rel='icon' href='/favicon.ico' />\n</Head>....\n</Gradient>\n``` \n\nClick `Next` to continue."
+    },
+    {
+      "file": "pages/index.js",
+      "line": 19,
+      "description": "Let's style the buttons. Write a comment that says:\n\n`// use styled components to style the buttons`\n\nPress enter and tab to accept Copilot's suggestions. It should give you the following code:\n\n```\nconst Button = styled.button\n`background: #f6d365; \nborder: none; \nborder-radius: 5px; \npadding: 10px 20px; \ncolor: #fff; \nfont-weight: bold; \ncursor: pointer; \n&:hover \n{ background: #fda085; }`;\n``` \n\nClick `Next` to continue."
+    },
+    {
+      "file": "pages/index.js",
+      "line": 80,
+      "description": "Change ALL the button tags to Button. It should look like this:\n\n```\n<Button onClick={() => handleDeleteTodo(todo.id)}>Delete</Button>\n``` \n\nClick `Next` to continue."
+    },
+    {
+      "title": "Try it out!",
+      "description": "Refresh the page! You should see a gradient background and styled buttons\n\n This tutorial is complete. You can keep experimenting with GitHub Copilot to add more styles or more functionality! Have fun. ."
+    }
   ],
   "ref": "main"
 }
