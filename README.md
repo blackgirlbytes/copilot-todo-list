@@ -5,7 +5,8 @@ This is a self-guided tutorial to help folks learn how to use GitHub Copilot. In
 * a running Next.js application
 * a devcontainer that installs CodeTour, Simple browser tab and GitHub Copilot when the Codespace is created
 * a CodeTour to guide the developer through using GitHub Copilot to develop a client-side to do list application. 
-
+## To complete this tutorial, you will need
+* Access to GitHub Copilot
 ## How does this work?
 The CodeTour prompts developers to write comments and lines of code that trigger GitHub Copilot to generate code to create a to do list app.
 
